@@ -2,6 +2,7 @@
   <div id="app">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="classic编辑器" name="first">
+        <el-button type="primary" @click="getData">获取html结构</el-button>
       <class-editor ></class-editor>
       </el-tab-pane>
       <el-tab-pane label="inline编辑器" name="second">
@@ -30,6 +31,9 @@ export default {
     }
   },
   methods:{
+    getData(){
+
+    },
     handleClick(idx){
       console.log(idx);
     }

@@ -1,5 +1,5 @@
 <template>
-  <ckeditor :editor="editor" :value="editorData"></ckeditor>
+  <ckeditor :editor="editor" :disabled=false :value="editorData"></ckeditor>
 </template>
 
 <script>
@@ -17,7 +17,7 @@
       editorData: "<p>Content of the editor.</p>",
       editorConfig: {
         //   toolbar: [ 'bold', 'italic', '|', 'link' ],
-          language: 'zh-cn'
+          language: 'zh'
         // The configuration of the editor.
       }
     };
