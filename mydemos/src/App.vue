@@ -2,10 +2,10 @@
   <div id="app">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="classic编辑器" name="first">
-      <editor-classic2 ></editor-classic2>
+      <class-editor ></class-editor>
       </el-tab-pane>
       <el-tab-pane label="inline编辑器" name="second">
-        <editor-inline ></editor-inline>
+        <inline-editor ></inline-editor>
       </el-tab-pane>
       <el-tab-pane label="ballon编辑器" name="third">ballon编辑器</el-tab-pane>
       <el-tab-pane label="document编辑器" name="fourth">document编辑器</el-tab-pane>
@@ -15,13 +15,14 @@
 </template>
 
 <script>
-import EditorClassic2 from './components/EditorClassic2'
-import EditorInline from './components/EditorInline'
+import classEditor from './components/class-editor'
+import inlineEditor from './components/inline-editor'
+// import EditorInline from './components/EditorInline'
 export default {
   name: "App",
   components:{
-    EditorClassic2,
-    EditorInline
+    classEditor,
+    inlineEditor
   },
   data(){
     return {
