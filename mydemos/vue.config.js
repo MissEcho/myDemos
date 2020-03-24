@@ -1,22 +1,3 @@
-/*
-需要安装的依赖
-
-npm install --save \
-    @ckeditor/ckeditor5-vue \
-    @ckeditor/ckeditor5-dev-webpack-plugin \
-    @ckeditor/ckeditor5-dev-utils \
-    postcss-loader@3 \
-    raw-loader@0.5.1 \
-    @ckeditor/ckeditor5-editor-classic \
-    @ckeditor/ckeditor5-editor-inline \
-    @ckeditor/ckeditor5-essentials \
-    @ckeditor/ckeditor5-basic-styles \
-    @ckeditor/ckeditor5-link \
-    @ckeditor/ckeditor5-paragraph \
-    @ckeditor/ckeditor5-theme-lark
-
-*/
-
 const path = require( 'path' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
 const { styles } = require( '@ckeditor/ckeditor5-dev-utils' );
@@ -34,7 +15,7 @@ module.exports = {
             // CKEditor needs its own plugin to be built using webpack.
             new CKEditorWebpackPlugin( {
                 // See https://ckeditor.com/docs/ckeditor5/latest/features/ui-language.html
-                language: 'zh'
+                language: 'zh-cn'
             } )
         ]
     },

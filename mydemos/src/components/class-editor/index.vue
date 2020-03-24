@@ -1,40 +1,44 @@
 <template>
-  <ckeditor :editor="editor" :disabled=false :value="editorData"></ckeditor>
+  <ckeditor :editor="editor" v-model="editorData"></ckeditor>
 </template>
 
 <script>
-  import ClassicEditor from './core/ckeditor'
-  
-  import CKEditor from '@ckeditor/ckeditor5-vue'
+import ClassicEditor from "./core/ckeditor";
+import CKEditor from "@ckeditor/ckeditor5-vue";
 
-  export default {
-    components:{
-        ckeditor: CKEditor.component
-    },
-    data() {
+export default {
+  components: {
+    ckeditor: CKEditor.component
+  },
+  data() {
     return {
       editor: ClassicEditor,
-      editorData: "<p>Content of the editor.</p>",
-      editorConfig: {
-        //   toolbar: [ 'bold', 'italic', '|', 'link' ],
-          language: 'zh'
-        // The configuration of the editor.
-      }
+      editorData: "",
+      editorConfig: {}
     };
   },
-  methods:{
-      getEditorTxt(){
-          console.log(this.editorData);
-      },
-      setEditorTxt(){
-          this.editorData=''
-      },
-      onEditorInput(txt){
-          console.log(txt);
-      }
-  }
-    
-  }
+  props: {},
+  methods: {}
+};
 </script>
 
-<style scoped lang="stylus"></style>
+<style scoped>
+.simple-box {
+  padding: 10px;
+  margin: 1em 0;
+  background: rgba(0, 0, 0, 0.1);
+  border: solid 1px hsl(0, 0%, 77%);
+  border-radius: 2px;
+}
+
+.simple-box-title, .simple-box-description {
+  padding: 10px;
+  margin: 0;
+  background: #FFF;
+  border: solid 1px hsl(0, 0%, 77%);
+}
+
+.simple-box-title {
+  margin-bottom: 10px;
+}
+</style>
